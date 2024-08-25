@@ -46,4 +46,3 @@ pub fn draw_rectangle(
         g,
     );
 }
-
