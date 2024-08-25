@@ -32,3 +32,4 @@ fn main() {
             game.draw(&c, g);
         });
     }   
+}
