@@ -16,6 +16,7 @@ const BACK_COLOR: Color= [0.5, 0.5, 0.2, 1.0];
 fn main() {
     let (width, height) = (64, 32);
     
+    // creating the window
     let mut window: PistonWindow = WindowSettings::new(
         "Snake",
         [to_coord_u32(width), to_coord_u32(height)],
@@ -24,6 +25,7 @@ fn main() {
         .build()
         .unwrap();
 
+    // creating the game
     let mut game = Game::make_new(width, height);
     while let Some(event) = window.next() {
         if let Some(Button::Keyboard(key)) = event.press_args() {

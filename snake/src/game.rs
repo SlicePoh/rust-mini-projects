@@ -6,9 +6,10 @@ use rand::{thread_rng, Rng};
 use crate::draw::{draw_block, draw_rectangle};
 use crate::snake::{Direction, Snake};
 
-const FOOD_COLOR: Color = [0.80, 0.00, 0.00, 1.0];
-const BORDER_COLOR: Color = [0.00, 0.00, 0.00, 1.0];
-const GAMEOVER_COLOR: Color = [0.90, 0.00, 0.00, 0.5];
+// colors in RGB-O
+const FOOD_COLOR: Color = [0.80, 0.0, 0.0, 1.0];
+const BORDER_COLOR: Color = [0.40, 0.30, 0.0, 1.0];
+const GAMEOVER_COLOR: Color = [0.90, 0.0, 0.0, 0.5];
 
 const MOVING_PERIOD: f64 = 0.1;
 const RESTART_TIME: f64 = 1.0;
@@ -30,11 +31,11 @@ pub struct Game {
 impl Game {
     pub fn make_new(width: i32, height: i32) -> Game {
         Game {
-            snake: Snake::make_new(2, 2),
+            snake: Snake::make_new(1, 1),
             waiting_time: 0.0,
             food_exists: true,
-            food_x: 6,
-            food_y: 4,
+            food_x: 10,
+            food_y: 12,
             width,
             height,
             game_over: false,
