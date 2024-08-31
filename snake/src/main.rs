@@ -14,7 +14,7 @@ use draw::to_coord_u32;
 const BACK_COLOR: Color= [0.5, 0.5, 0.2, 1.0];
 
 fn main() {
-    let (width, height) = (64, 32);
+    let (width, height) = (62, 32);
     
     // creating the window
     let mut window: PistonWindow = WindowSettings::new(

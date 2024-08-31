@@ -55,7 +55,7 @@ impl Snake {
         (head_block.x, head_block.y)
     }
 
-    pub fn move_forward(&mut self, dir: Option<Direction>) {
+    pub fn move_forward(&mut self, dir: Option<Direction>, width: i32, height: i32) {
         match dir {
             Some(d) => self.direction=d,
             None => ()
@@ -64,10 +64,10 @@ impl Snake {
         let (last_x, last_y): (i32, i32) = self.head_position();
         
         let new_block= match self.direction {
-            Direction::Up => Block {x: last_x, y: last_y-1},
-            Direction::Down => Block {x: last_x, y: last_y+1},
-            Direction::Left => Block {x: last_x-1, y: last_y},
-            Direction::Right => Block {x: last_x+1, y: last_y},
+            Direction::Up => Block { x: last_x, y: (last_y - 1 + height) % height },
+            Direction::Down => Block { x: last_x, y: (last_y + 1) % height },
+            Direction::Left => Block { x: (last_x - 1 + width) % width, y: last_y },
+            Direction::Right => Block { x: (last_x + 1) % width, y: last_y },
         };
         self.body.push_front(new_block);
         let removed_block = self.body.pop_back().unwrap();
