@@ -53,15 +53,20 @@ impl Game {
     }
 
     pub fn add_obstacles(&mut self) {
+        
         self.obstacles.clear();
 
         let mut rng = thread_rng();
 
-        for _ in 0..4 {
+        for _ in 0..4 { // 4 obstacles
+
+            // choose random coordinates within the window
             let mut x = rng.gen_range(2..self.width - 2);
             let mut y = rng.gen_range(2..self.height - 2);
 
+            // checking if the obstacle overlaps with any of the food items or the snake itself
             while self.snake.overlap_tail(x, y) || self.check_overlap_with_food(x, y) {
+                // choosing random coordinates again until it doesn't match with food or snake
                 x = rng.gen_range(2..self.width - 2);
                 y = rng.gen_range(2..self.height - 2);
             }
@@ -101,12 +106,12 @@ impl Game {
         }
 
         for obs in &self.obstacles {
-            draw_block(OBSTACLE_COLOR, obs.x, obs.y, con, g);
-            draw_block(OBSTACLE_COLOR, obs.x, obs.y - 2, con, g);
-            draw_block(OBSTACLE_COLOR, obs.x, obs.y - 1, con, g);
-            draw_block(OBSTACLE_COLOR, obs.x, obs.y + 1, con, g);
-            draw_block(OBSTACLE_COLOR, obs.x, obs.y + 2, con, g);
-
+            // draw_block(OBSTACLE_COLOR, obs.x, obs.y, con, g);
+            // draw_block(OBSTACLE_COLOR, obs.x, obs.y - 2, con, g);
+            // draw_block(OBSTACLE_COLOR, obs.x, obs.y - 1, con, g);
+            // draw_block(OBSTACLE_COLOR, obs.x, obs.y + 1, con, g);
+            // draw_block(OBSTACLE_COLOR, obs.x, obs.y + 2, con, g);
+            draw_rectangle(OBSTACLE_COLOR, obs.x, obs.y-2, 1, 5, con, g);
             draw_rotated_rectangle(OBSTACLE_COLOR, obs.x - 1, obs.y - 1, 2.0, 0.4, true, con, g);
             draw_rotated_rectangle(
                 OBSTACLE_COLOR,
@@ -131,19 +136,21 @@ impl Game {
     }
 
     fn check_overlap_with_food(&self, x: i32, y: i32) -> bool {
+        // creating a vector with food item's coordinates 
         let food_positions = vec![
             (self.food_x, self.food_y),  
             (self.food_x - 1, self.food_y - 1),  
             (self.food_x + 1, self.food_y + 1)
         ];
-    
+        // creating a vector with obstacle's coordinates 
         let obstacle_positions = vec![
             (x, y),            
             (x, y + 1), (x, y - 1),      
             (x, y + 2), (x, y - 2),
             (x - 1, y - 1), (x + 1, y + 1)     
         ];
-    
+        
+        // matching them
         for (ox, oy) in obstacle_positions {
             if food_positions.contains(&(ox, oy)) {
                 return true;
