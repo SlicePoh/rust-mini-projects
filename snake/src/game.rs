@@ -106,23 +106,9 @@ impl Game {
         }
 
         for obs in &self.obstacles {
-            // draw_block(OBSTACLE_COLOR, obs.x, obs.y, con, g);
-            // draw_block(OBSTACLE_COLOR, obs.x, obs.y - 2, con, g);
-            // draw_block(OBSTACLE_COLOR, obs.x, obs.y - 1, con, g);
-            // draw_block(OBSTACLE_COLOR, obs.x, obs.y + 1, con, g);
-            // draw_block(OBSTACLE_COLOR, obs.x, obs.y + 2, con, g);
             draw_rectangle(OBSTACLE_COLOR, obs.x, obs.y-2, 1, 5, con, g);
             draw_rotated_rectangle(OBSTACLE_COLOR, obs.x - 1, obs.y - 1, 2.0, 0.4, true, con, g);
-            draw_rotated_rectangle(
-                OBSTACLE_COLOR,
-                obs.x + 1,
-                obs.y + 1,
-                2.0,
-                0.4,
-                false,
-                con,
-                g,
-            );
+            draw_rotated_rectangle(OBSTACLE_COLOR, obs.x + 1, obs.y + 1, 2.0, 0.4, false, con, g,);
         }
 
         draw_rectangle(BORDER_COLOR, 0, 0, self.width, 1, con, g);
