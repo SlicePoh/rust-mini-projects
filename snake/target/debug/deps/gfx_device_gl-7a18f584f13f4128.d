@@ -1,0 +1,11 @@
+D:\RUST\rust-mini-projects\snake\target\debug\deps\libgfx_device_gl-7a18f584f13f4128.rmeta: C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\lib.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\command.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\factory.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\info.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\shade.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\state.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\tex.rs
+
+D:\RUST\rust-mini-projects\snake\target\debug\deps\gfx_device_gl-7a18f584f13f4128.d: C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\lib.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\command.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\factory.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\info.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\shade.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\state.rs C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\tex.rs
+
+C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\lib.rs:
+C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\command.rs:
+C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\factory.rs:
+C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\info.rs:
+C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\shade.rs:
+C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\state.rs:
+C:\Users\shani\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gfx_device_gl-0.16.2\src\tex.rs:
