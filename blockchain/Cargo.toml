@@ -4,3 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+time = "*"
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
+sha2 = "*"
+chrono = "*"
